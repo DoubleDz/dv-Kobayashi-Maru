@@ -1,4 +1,11 @@
+.some-background {
+	background:url(images/container_image1.png);
+}
+.someother-background {
+	background:url(images/container_image2.png);
+}
+
 body {
 	background-color: #f5f5f5;
-	padding-top: 70px;
+	padding-top: 10px;
 }
