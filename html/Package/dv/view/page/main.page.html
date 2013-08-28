@@ -9,6 +9,8 @@ $(function(){
 });
 </script>
 
+
+
     <!-- Carousel
     ================================================== -->
     
@@ -78,18 +80,9 @@ $(function(){
 	<div class="row-fluid">
 		<div class="span12">
         	<div class="row">
-               <div class="span3">
-               	<div class="span 12 some-black-activity">
-                		
-                	</div>
- 
-               </div>
-               <div class="span3">
-               </div>
-               <div class="span3">
-               </div>
-               <div class="span3">
-               </div>
+                  <div id="posts" class="isotope row">
+                    <!-- Posts will go here ... -->
+                  </div>
             </div>
         </div>
 	</div>
@@ -267,7 +260,27 @@ $(function(){
  </div><!-- /.container -->
 
 	
-      
+      <!--JQuery Masonry-->
+
+  <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+  <script src="Package/bootstrap/js/bootstrap.min.js"></script>
+  <script src="Package/dv/js/jquery.ba-hashchange.min.js"></script>
+  <script src="Package/dv/js/jquery.isotope.min.js"></script>
+  <script src="Package/dv/js/mql.js"></script>
+  <script src="Package/dv/js/reddit.js"></script>
+  <script src="Package/dv/js/script.js"></script>
  
 
-
+<script id="post" type="text/x-jquery-tmpl">
+  <div id="${id}" class="post item span4">
+    <div class="well">
+      <h4>
+        <a href="${permalink_absolute}" target="_blank">${title}</a>
+      </h4>
+      <div class="info">
+        <span class="badge">${score}</span>
+        <span class="badge">r/${subreddit}</span>
+      </div>
+    </div>
+  </div>
+</script>
