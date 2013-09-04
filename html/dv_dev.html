@@ -91,47 +91,29 @@
 
 </script>
 
-<script>
-(function() {
-  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-  $.getJSON( flickerAPI, {
-    tags: "mount rainier",
-    tagmode: "any",
-    format: "json"
-  })
-  .done(function( data ) {
-    $.each( data.items, function( i, item ) {
-      $("#has-example").append('<img class="img" src="' + item.media.m + '">' );
-      if ( i === 3 ) {
-        return false;
-      }
-    });
-  });
-})();
+      <!--JQuery Masonry-->
+  <script src="../../js/masonry.js"></script>
+  <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+  <script src="Package/bootstrap/js/bootstrap.min.js"></script>
+  <script src="Package/dv/js/jquery.ba-hashchange.min.js"></script>
+  <script src="Package/dv/js/jquery.isotope.min.js"></script>
+  <script src="Package/dv/js/mql.js"></script>
+  <script src="Package/dv/js/wordpress.js"></script>
+  <script src="Package/dv/js/script.js"></script>
+ 
 
-    var posts = [], o = $.extend({}, $.wordpress.defaults, options);
-
-    $.getJSON(o.api + '/' + '?json=get_posts&count=' + o.limit, function(result){
-      $.each(result.posts, function(i, post){
-        // Create an absolute permalink containing the api url.
-        //post.data.permalink_absolute = o.api + post.data.permalink;
-
-        // Append to posts array.
-        posts.push(post.url);
-
-        // Fire callback when finished parsing through posts.
-        if ( i + 1 == result.count ) {
-          cb.call(self, posts);
-        }
-      });
-    });
-
-  $.wordpress.defaults = {
-    api: 'http://dv-mobile.com/site',
-    subreddit: '',
-    limit: 6
-  };
-
+<script id="post" type="text/x-jquery-tmpl">
+  <div id="${id}" class="post item span4">
+    <div class="well">
+      <h4>
+        <a href="${permalink_absolute}" target="_blank">${title}</a>
+      </h4>
+      <div class="info">
+        <span class="badge">${score}</span>
+        <span class="badge">r/${subwordpress}</span>
+      </div>
+    </div>
+  </div>
 </script>
 </body>
 </html>
