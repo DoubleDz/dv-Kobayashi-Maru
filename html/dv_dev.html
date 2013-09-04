@@ -90,5 +90,48 @@
 	window.EpicMvc.Epic.run( ['Base', 'BaesDevl', 'dv'], 'LoadStrategy$BaseDevl', 'bootstrap$bootstrap', []);
 
 </script>
+
+<script>
+(function() {
+  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "mount rainier",
+    tagmode: "any",
+    format: "json"
+  })
+  .done(function( data ) {
+    $.each( data.items, function( i, item ) {
+      $("#has-example").append('<img class="img" src="' + item.media.m + '">' );
+      if ( i === 3 ) {
+        return false;
+      }
+    });
+  });
+})();
+
+    var posts = [], o = $.extend({}, $.wordpress.defaults, options);
+
+    $.getJSON(o.api + '/' + '?json=get_posts&count=' + o.limit, function(result){
+      $.each(result.posts, function(i, post){
+        // Create an absolute permalink containing the api url.
+        //post.data.permalink_absolute = o.api + post.data.permalink;
+
+        // Append to posts array.
+        posts.push(post.url);
+
+        // Fire callback when finished parsing through posts.
+        if ( i + 1 == result.count ) {
+          cb.call(self, posts);
+        }
+      });
+    });
+
+  $.wordpress.defaults = {
+    api: 'http://dv-mobile.com/site',
+    subreddit: '',
+    limit: 6
+  };
+
+</script>
 </body>
 </html>
