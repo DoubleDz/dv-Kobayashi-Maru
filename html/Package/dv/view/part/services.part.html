@@ -1,3 +1,7 @@
+<script>
+	$('#stategyModel').modal('toggle')
+</script>                       
+
 <div class="row-fluid">
 		<div class="span12">
 			<div class="hero-unit some-background">
@@ -8,12 +12,32 @@
       				<!-- Three columns of text below the carousel -->
      	     			<div class="row">
                           <div class="span4">
-                            <a href="http://www.dv-mobile.com/site/home/dvmobile-mobile-strategy-and-planning-services/">
+                          <div id="stategyModel" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                      <h3 id="myModalLabel">Mobile Stategy and Planning</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p>DV•mobile can assist you with developing winning strategies to leverage mobile computing’s phenomenal growth to expand your business.
+
+87% of Americans now own a cell phone or mobile device. More users will connect to the Internet through mobile devices than desktop PCs by 2015. 
+
+60% of users can currently access the web through cell phones and mobile devices and the rate is increasing exponentially. 
+
+Mobile technologies allow you to engage and interact with clients anytime, anywhere and through their preferred medium.
+
+If you are not adding mobile to your marketing mix, you risk losing an ever-increasing audience as users move towards accessing the Internet, social networks and other communication mediums via smart phones and mobile devices. Organizations that take advantage of this shift in consumer behavior now, as it is emerging, stand to benefit the most.
+
+Contact DV•mobile now to discuss how your business can benefit from mobile computing.</p>
+                                    </div>
+                                  </div>
+                            <a data-toggle="modal" href="#stategyModal" role="button" class="btn">
                              <center>
                                   <img class="img-circle some-center" src="Package/dv/images/calender_image.png">
                               </center>
                              <h5 align="center">Mobile Stategy and Planning</h5 some-center>
                             </a>
+                              
                          </div><!-- /.span4 -->
                          <div class="span4">
                            <a href="http://www.dv-mobile.com/site/home/dv%E2%80%A2mobile-mobile-social-site-integration-services/">
@@ -58,6 +82,8 @@
                             </a>
             				</div><!-- /.span4 -->
           				</div><!-- /.row -->
+                        
+                      
         	 </div>
         </div>
 	</div>
