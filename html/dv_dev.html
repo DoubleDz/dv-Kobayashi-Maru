@@ -5,42 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Bootstrap / Base Package CSS -->
-  <link href="Package/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" />
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" />
   <link href="Package/Base/css.css" rel="stylesheet" />
   <link href="Package/BaseDevl/css.css" rel="stylesheet" />
   
   <!-- Load Custom CSS scripts here: example ./Package/myPackage/CSS/style.css -->
   <link href="Package/dv/css.css" rel="stylesheet" />
 
-  <!-- Load jQuery -->
-  <script src="js/modernizr.custom.63321.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
-  <script src="js/bootstrap.min.js"></script>
-  <script>
-  $(document).ready(function(){
-    $('.carousel').carousel({
-      interval: 2000
-    });
-  });
-</script>
-  
-  <!-- Uncomment the Twitter Bootstrap Packages that you use-->
-  <script src="Package/bootstrap/js/bootstrap-affix.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-typeahead.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-alert.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-tooltip.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-dropdown.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-scrollspy.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-collapse.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-button.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-modal.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-scrollspy.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-transition.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-tab.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-popover.js" type="text/javascript" charset="utf-8"></script>
-  <script src="Package/bootstrap/js/bootstrap-carousel.js" type="text/javascript" charset="utf-8"></script>
+  <!-- CDN JS -->	
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
 
   <!-- Load EpicMvc (Epic Model-View-Controller) -->
   <script src="EpicMvc/Epic.js" type="text/javascript" charset="utf-8"></script>
@@ -52,7 +28,6 @@
   <script src="EpicMvc/ModelJS.js" type="text/javascript" charset="utf-8"></script>
   <script src="EpicMvc/Request.js" type="text/javascript" charset="utf-8"></script>
   <script src="EpicMvc/ViewExe.js" type="text/javascript" charset="utf-8"></script>
-
   <script src="EpicMvc/FistGroupCache.js" type="text/javascript" charset="utf-8"></script>
   <script src="EpicMvc/Fist.js" type="text/javascript" charset="utf-8"></script>
   <script src="EpicMvc/FistFilt.js" type="text/javascript" charset="utf-8"></script>
@@ -80,26 +55,14 @@
   <script src="Package/bootstrap/Extras/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 
   <!-- Load custom JS here: example ./Package/myPackage/JS/myScript.js  -->
-
-</head>
-<body id="mnc-body">
-<script type="text/javascript">
-
-	window._log2 = window.Function.prototype.bind.call(window.console.log, window.console);
-    window.jQuery.support.cors= true; // IE needs this
-	window.EpicMvc.Epic.run( ['Base', 'BaesDevl', 'dv'], 'LoadStrategy$BaseDevl', 'bootstrap$bootstrap', []);
-
-</script>
-
-      <!--JQuery Masonry-->
-  <script src="../../js/masonry.js"></script>
-  <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-  <script src="Package/bootstrap/js/bootstrap.min.js"></script>
+  <script src="Package/dv/js/modernizr.custom.63321.js"></script>
+  <script src="Package/dv/js/masonry.js"></script>
   <script src="Package/dv/js/jquery.ba-hashchange.min.js"></script>
   <script src="Package/dv/js/mql.js"></script>
   <script src="Package/dv/js/wordpress.js"></script>
   <script src="Package/dv/js/script.js"></script>
-  
+
+<!--
 <script id="post" type="text/x-jquery-tmpl">
   <div id="${id}" class="post item span4">
     <div class="well">
@@ -113,8 +76,16 @@
     </div>
   </div>
 </script>
+-->
 
-   
+</head>
+<body id="mnc-body">
+<script type="text/javascript">
 
+	window._log2 = window.Function.prototype.bind.call(window.console.log, window.console);
+    window.jQuery.support.cors= true; // IE needs this
+	window.EpicMvc.Epic.run( ['Base', 'BaesDevl', 'dv'], 'LoadStrategy$BaseDevl', 'bootstrap$bootstrap', []);
+
+</script>
 </body>
 </html>
