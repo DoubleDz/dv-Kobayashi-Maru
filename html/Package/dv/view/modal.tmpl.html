@@ -1,0 +1,13 @@
+<epic:defer name="modal_height">
+	$('.modal-body').attr('style', 'max-height: ' + (Math.floor($(window).height() * 0.8)) + 'px !important'); 
+</epic:defer>
+
+<div class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-body">
+		<epic:page />
+		<br><br>
+	</div>
+	<div class="modal-footer">
+		<epic:link_action action="close_modal" class="btn" data-dismiss="modal" aria-hidden="true">Close</epic:link_action>
+	</div>
+</div>
