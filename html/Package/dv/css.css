@@ -31,6 +31,15 @@
 .blank-spacer {
 	padding-top:25px;
 }
+
+.blank-superspacer {
+	padding-top:60px;
+}
+
+.blank-bottomspacer {
+	padding-bottom:20px;
+}
+
 some-center{
 	text-align:center;
 }
@@ -245,14 +254,25 @@ button:active {
 #animate-item-size-responsive .item.is-expanded {
   width: 60%;
 }
+.short-width {
+	width:500px;
+}
 
- /* Examples: modal */
-  .modal-example .modal {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+.modal-body {
+	height:500px;
+}
+  
+  .carousel-indicators {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 15px;
+  left: 550px;
   }
   
-  
+  .carousel-indicators li{
+	  background-color:#666;
+  }
+  .carousel-indicators .active {
+	  background-color:#609;
+}
