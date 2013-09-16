@@ -58,8 +58,22 @@ dt {
 	font-style:normal;
 	font-weight:normal;
 }
+.move-right {
+	padding-left:225px;
+}
+.move-right-hero {
+	padding-left:110px;
+}
+.move-right-c {
+	padding-left:180px;
+}
+
+.move-right-a {
+	padding-left:70px;
+}
 
 dd {
+	padding-left:45px;
 	font-size:16px;
 	font-style:oblique;
 }
