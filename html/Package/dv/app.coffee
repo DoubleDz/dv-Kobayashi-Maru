@@ -30,6 +30,12 @@ window.EpicMvc.app$dv=
 							r:{}, call: 'Pageflow/path', p:{path:'//social_integration'} ]
 						go_cloud_strat: 		 call: 'Pageflow/save_path', RESULTS: [
 							r:{}, call: 'Pageflow/path', p:{path:'//cloud_strat'} ]
+						go_about_dvmobile: 		 call: 'Pageflow/save_path', RESULTS: [
+							r:{}, call: 'Pageflow/path', p:{path:'//about_dvmobile'} ]
+						go_about_leadership: 		 call: 'Pageflow/save_path', RESULTS: [
+							r:{}, call: 'Pageflow/path', p:{path:'//about_leadership'} ]
+						go_about_career: 		 call: 'Pageflow/save_path', RESULTS: [
+							r:{}, call: 'Pageflow/path', p:{path:'//about_career'} ]
 					STEPS:
 						landing:	page:'main'
 						mobile_activation: page:'mobile_activation', modal: 'slide'
@@ -38,3 +44,6 @@ window.EpicMvc.app$dv=
 						mobile_voice: page:'mobile_voice_activation', modal: 'slide'
 						social_integration: page:'social_integration', modal: 'slide'
 						cloud_strat: page:'cloud_strat', modal: 'slide'
+						about_dvmobile: page:'about_dvmobile', modal: 'slide'
+						about_leadership: page:'about_leadership', modal: 'slide'
+						about_career: page:'about_career', modal: 'slide'

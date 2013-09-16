@@ -117,9 +117,8 @@
                     }
                   }
                 ]
-              }
-            },
-			  go_about_dvmobile: {
+              },
+              go_about_dvmobile: {
                 call: 'Pageflow/save_path',
                 RESULTS: [
                   {
@@ -131,7 +130,7 @@
                   }
                 ]
               },
-			   go_about_leadership: {
+              go_about_leadership: {
                 call: 'Pageflow/save_path',
                 RESULTS: [
                   {
@@ -143,7 +142,7 @@
                   }
                 ]
               },
-			  	go_about_career: {
+              go_about_career: {
                 call: 'Pageflow/save_path',
                 RESULTS: [
                   {
@@ -154,7 +153,8 @@
                     }
                   }
                 ]
-              },
+              }
+            },
             STEPS: {
               landing: {
                 page: 'main'
@@ -183,16 +183,16 @@
                 page: 'cloud_strat',
                 modal: 'slide'
               },
-			   about_leadership: {
+              about_dvmobile: {
+                page: 'about_dvmobile',
+                modal: 'slide'
+              },
+              about_leadership: {
                 page: 'about_leadership',
                 modal: 'slide'
               },
-			  	 about_career: {
+              about_career: {
                 page: 'about_career',
-                modal: 'slide'
-              },
-			   about_dvmobile: {
-                page: 'cloud_strat',
                 modal: 'slide'
               }
             }
