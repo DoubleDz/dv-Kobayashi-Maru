@@ -44,6 +44,9 @@
 .blank-bottomspacer {
 	padding-bottom:20px;
 }
+.blank-leftspacer {
+	padding-left:15px;
+}
 
 some-center{
 	text-align:center;
@@ -275,7 +278,7 @@ button:active {
   width: 60%;
 }
 .short-width {
-	width:500px;
+	width:750px;
 }
 
 body .iframe { 
@@ -285,10 +288,11 @@ body .iframe {
 
 body .modal {
     /* new custom width */
-    width: 600px;
-	height:500px;
+    width: 800px;
+	height:600px;
     /* must be half of the width, minus scrollbar on the left (30px) */
-    margin-left: -280px;
+    margin-left: -400px;
+	padding-left:30px;
 	overflow: hidden;
 }
 
@@ -306,3 +310,4 @@ body .modal {
   .carousel-indicators .active {
 	  background-color:#609;
 }
+.
