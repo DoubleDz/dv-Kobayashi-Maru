@@ -15,23 +15,23 @@
 	color:#606;
 }
 .some-background {
-	background:url(images/container_image1.png);
+	background:url(../images/container_image1.png);
 }
 	
 .someother-background {
-	background:url(images/container_image2.png);
+	background:url(../images/container_image2.png);
 }
 .some-footer {
-	background:url(images/footer_image.png);
+	background:url(../images/footer_image.png);
 }
 .some-purple-activity {
-	background:url(images/activity_cell_purple.png);
+	background:url(../images/activity_cell_purple.png);
 }
 .some-black-activity {
-	background:url(images/activity_cell_black.png);
+	background:url(../images/activity_cell_black.png);
 }
 .some-gray-activity {
-	background:url(images/activity_cell_gray.png);
+	background:url(../images/activity_cell_gray.png);
 }
 .blank-spacer {
 	padding-top:25px;
