@@ -14,6 +14,10 @@
       User: {
         "class": 'User',
         inst: 'dvU'
+      },
+      Activity: {
+        "class": 'Activity',
+        inst: 'dvA'
       }
     },
     MACROS: {

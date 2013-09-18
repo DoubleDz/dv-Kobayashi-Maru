@@ -4,6 +4,7 @@ window.EpicMvc.app$dv=
 		template:	default: 'main', slide: 'modal'
 	MODELS:
 		User:		class: 'User',	inst: 'dvU'
+		Activity:	class: 'Activity', inst: 'dvA'
 	MACROS:
 		close_modal: call:'Pageflow/restore_path'
 	CLICKS:
