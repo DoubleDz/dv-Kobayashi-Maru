@@ -14,10 +14,10 @@ HtmlRoot=${EPIC_HtmlRoot-'/Applications/MAMP/htdocs'}
 EpicDir=${EPIC_EpicDir-${3-"$HtmlRoot/epic"}}
 EnvPkg=${EPIC_EnvPkg-'bootstrap'}
 
-UserDir=${EPIC_UserDir-${2-"$HtmlRoot/web"}}
+UserDir=${EPIC_UserDir-${2-"$HtmlRoot/dv_dev"}}
 UserPkgs=${EPIC_UserPkgs-'dv'}
 UserIndex=${EPIC_UserIndex-'dv-index'}
-MinHtml=${EPIC_MinHtml-${1-'app'}}
+MinHtml=${EPIC_MinHtml-${1-'dv'}}
 
 #echo HtmlRoot=$HtmlRoot
 echo EpicDir=$EpicDir
@@ -86,7 +86,7 @@ do
   MD5Check="$MD5Check %MD5_${PKG}CSS%"
   mkdir -p MinHtml/Package/$PKG/css
   cat DevUser/Package/$PKG/css/_*css > $MinSiteCss
-  ECHO cp -r DevUser/Package/$PKG/css/icons MinHtml/Package/$PKG/css/.
+#  ECHO cp -r DevUser/Package/$PKG/css/icons MinHtml/Package/$PKG/css/.
   ECHO cp -r DevUser/Package/$PKG/images MinHtml/Package/$PKG/.
 done
 
@@ -108,11 +108,6 @@ cat DevUser/$UserIndex.html | awk "{print $SUB}" > MinHtml/index.html
 echo "-- Custom assets --"
 # Notes:
 
-IMGS='gd_bundle.crt iprojectmobile.com.crt config.js favicon.ico'
-for IMG in $IMGS
-do
-  ECHO cp DevUser/$IMG MinHtml/.
-done
-
+echo Clean-up specific to our module
 
 echo Done.
