@@ -1,3 +1,12 @@
+
+<script>
+$(document).on('click', 'a.accordion-toggle', function(e) {
+    $(e.target).parent().siblings('.accordion-body').on('hidden', function(e) {
+        e.stopPropagation();
+    });
+});
+</script>
+
 <div class="container short-width">
 			<div class="span7">
               <epic:link_action action="close_modal" data-dismiss="modal" aria-hidden="true"><button type="button" class="close" >&times;</button></epic:link_action>
@@ -8,9 +17,9 @@
           <iframe src="http://www.dv-mobile.com/dev/career-opportunities/" width="750" height="300" scrolling="no" frameborder="0"></iframe>
           </div>
           <div class="row">
-          <div class="span7.2">
+   <!--       <div class="span7.2"> -->
            <div class="accordion blank-bottomspacer" id="accordion2">
-                <div class="accordion-group">
+                <div class="accordion-group" >
                   <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
                       Junior Android Developer
