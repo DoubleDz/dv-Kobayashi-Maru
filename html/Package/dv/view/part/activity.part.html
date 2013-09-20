@@ -1,23 +1,35 @@
 <!--Activity-->
 <section id="activity">
-<div class="row-fluid blank-superspacer">
+	<div class="row-fluid blank-superspacer">
 		<div class="span12">
-          <div id="hero">
-          		<div class="row">
-        		 <dl class="dl-horizontal move-right">
-              		<dt>Updates<dt>
-                 	<dd>Check out the latest news and see what we've been up to.<dd>
-         		 </dl>
-        
-           </div>
-            <div class="primary-content blank-superspacer">
-          
-              <div class="hero-masonry">
-                <div class="grid-sizer"></div>
-          		  <epic:foreach table="Activity/ActivityPost">
-						Activity Post goes here
+			<div id="hero">
+				<div class="row">
+					<dl class="dl-horizontal move-right">
+						<dt>Updates<dt>
+						<dd>Check out the latest news and see what we've been up to.<dd>
+					</dl>
+				</div>
+			<div class="primary-content blank-superspacer">
+
+			<div class="hero-masonry">
+				<div class="grid-sizer"></div>
+					<epic:foreach table="Activity/ActivityPost">
+						<div class="hero-item has-example is-hidden">
+							<a href="#">
+							<img src="&ActivityPost/picture;">
+							<p class="example-title">&ActivityPost/title;</p>
+							</a>
+						</div>
 					</epic:foreach>
-                  <div class="hero-item has-example is-hidden">
+				</div>
+			</div>
+			<!-- put in once json works <p class="pull-right"><button id="append-button">View More<img src="Package/dv/images/white_double_dash.png"></button>-->
+		</div> <!-- span12 -->	
+	</div> <!-- row-fluid blank-superspacer-->
+</section>
+
+<!--
+<div class="hero-item has-example is-hidden">
                   	<a href="http://www.dv-mobile.com/site/dallas-cowboys-mobile-app/">
                     		<img src="http:\/\/www.dv-mobile.com\/site\/wp-content\/uploads\/2012\/11\/Captimos-homepage-.jpg">
                          <p class="example-title">Captimo Mobile video app built by DV-mobile</p>
@@ -51,11 +63,4 @@
                          <p class="example-title">Glamour friends fans used for loreal mobile taxi shops</p>
                       </a>
                   </div>
-                </div>
-               <!-- put in once json works <p class="pull-right"><button id="append-button">View More<img src="Package/dv/images/white_double_dash.png"></button>-->
-              </div>
-             </div>		
-          </div>
-        </div>
-</div>
-</section>
+-->
