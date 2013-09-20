@@ -11,19 +11,7 @@
 				</div>
 			<div class="primary-content blank-superspacer">
 
-			<div class="hero-masonry">
-				<div class="grid-sizer"></div>
-					<epic:foreach table="Activity/ActivityPost">
-						<div class="hero-item has-example is-hidden">
-							<a href="#">
-							<img src="&ActivityPost/picture;">
-							<p class="example-title">&ActivityPost/title;</p>
-							</a>
-						</div>
-					</epic:foreach>
-				</div>
-			</div>
-			<!-- put in once json works <p class="pull-right"><button id="append-button">View More<img src="Package/dv/images/white_double_dash.png"></button>-->
+			<epic:page_part part="activity_post" dynamic="div" />
 		</div> <!-- span12 -->	
 	</div> <!-- row-fluid blank-superspacer-->
 </section>

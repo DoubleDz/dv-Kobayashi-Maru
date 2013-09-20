@@ -1,0 +1,13 @@
+<div class="hero-masonry">
+	<div class="grid-sizer"></div>
+		<epic:foreach table="Activity/ActivityPost">
+			<div class="hero-item has-example is-hidden">
+				<a href="&ActivityPost/url;">
+				<img src="&ActivityPost/picture;">
+				<p class="example-title">&ActivityPost/title;</p>
+				</a>
+			</div>
+		</epic:foreach>
+	</div>
+<!-- put in once json works <p class="pull-right"><button id="append-button">View More<img src="Package/dv/images/white_double_dash.png"></button>-->
+</div>

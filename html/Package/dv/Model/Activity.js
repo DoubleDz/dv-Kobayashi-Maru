@@ -14,6 +14,7 @@
         total_posts: 6
       };
       Activity.__super__.constructor.call(this, Epic, view_nm, ss);
+      this.cache_activities = [];
     }
 
     Activity.prototype.action = function(act, p) {
@@ -45,14 +46,17 @@
         _this = this;
 
       debug = "Activity.getActivities";
-      console.log(debug);
+      console.log(debug, this.cache_activities);
+      if (this.cache_activities.length) {
+        return this.cache_activities;
+      }
       results = [];
       options = {
         url: 'http://www.dv-mobile.com/site/?json=get_posts&count=6',
         type: 'GET',
         dataType: 'jsonp'
       };
-      ($.ajax(options)).always(function(data, textStatus, errorThrown) {
+      return ($.ajax(options)).always(function(data, textStatus, errorThrown) {
         var post, row, _i, _len, _ref;
 
         console.log(debug, 'success function:', data);
@@ -61,6 +65,7 @@
           post = _ref[_i];
           row = {};
           row.title = post.title_plain;
+          row.url = post.url;
           row.picture = '';
           if (post.attachments[0]) {
             row.picture = post.attachments[0].url;
@@ -68,10 +73,10 @@
           console.log(debug, row);
           results.push(row);
         }
-        _this.Table['ActivityPost'] = results;
+        _this.cache_activities = results;
+        _this.invalidateTables(['ActivityPost']);
         return console.log('final table', results);
       });
-      return results;
     };
 
     return Activity;
