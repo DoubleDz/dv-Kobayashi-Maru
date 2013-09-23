@@ -35,8 +35,8 @@ class Activity extends window.EpicMvc.ModelJS
 				row.title = post.title_plain
 				row.url = post.url
 				row.picture = ''
-				if post.attachments[0]
-					row.picture = post.attachments[0].url
+				if post.thumbnail_images
+					row.picture = post.thumbnail_images.full.url
 				console.log debug, row
 				results.push row
 			@cache_activities = results
