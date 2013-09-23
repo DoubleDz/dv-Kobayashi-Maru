@@ -1,0 +1,313 @@
+	
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+.some-text {
+	color:#FFF;
+}
+.some-text:hover {
+	color:#606;
+}
+.some-background {
+	background:url(../images/container_image1.png);
+}
+	
+.someother-background {
+	background:url(../images/container_image2.png);
+}
+.some-footer {
+	background:url(../images/footer_image.png);
+}
+.some-purple-activity {
+	background:url(../images/activity_cell_purple.png);
+}
+.some-black-activity {
+	background:url(../images/activity_cell_black.png);
+}
+.some-gray-activity {
+	background:url(../images/activity_cell_gray.png);
+}
+.blank-spacer {
+	padding-top:25px;
+}
+
+.blank-superspacer {
+	padding-top:60px;
+}
+
+.blank-bottomspacer {
+	padding-bottom:20px;
+}
+.blank-leftspacer {
+	padding-left:15px;
+}
+
+some-center{
+	text-align:center;
+}
+
+.thumbnail {
+	border: 0px solid #ddd;
+	-webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.055);
+     -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.055);
+          box-shadow: 0 0px 0px rgba(0, 0, 0, 0.055);
+}
+dt {
+	font-size:22px;
+	font-style:normal;
+	font-weight:normal;
+}
+.move-right {
+	padding-left:225px;
+}
+.move-right-hero {
+	padding-left:110px;
+}
+.move-right-c {
+	padding-left:180px;
+}
+
+.move-right-a {
+	padding-left:70px;
+}
+
+dd {
+	padding-left:45px;
+	font-size:16px;
+	font-style:oblique;
+}
+
+li {
+	padding-top:10px;
+}
+a {
+	color:#000;
+}
+a:hover {
+	color:#606;
+}
+body {
+	font:Helvetica;
+	background-color: #f5f5f5;
+	padding-top: 52px;
+	overflow: scroll;
+    overflow-x:hidden;
+}
+/* ---- button ---- */
+button {
+  font-size:16px;
+  display: inline-block;
+  background:#666;
+  border: none;
+  padding: 0.8em 1.0em;
+  color: white;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.3);
+  cursor: pointer;
+  border-radius: 7px;
+}
+.some-grayback {
+	background:#000;
+}
+button:hover {
+  background:#306;
+  color: white;
+}
+
+button:active {
+  background:#306;
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.6);
+}
+
+
+/* ---- hero masonry ---- */
+
+.hero-masonry { 
+  background-color:transparent;
+  border-radius: 10px;
+  padding: 10px 1%;
+  margin-bottom: 20px;
+}
+
+.hero-masonry:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.hero-item,
+.hero-masonry .grid-sizer {
+  width: 46.9%; /* juse a lil under  47 */
+  margin: 10px 1%;
+  float: left;
+  border-radius: 8px;
+}
+
+/* necessary for proper sizing with margins */
+.hero-masonry .grid-sizer {
+  position: absolute;
+}
+
+.hero-item.texty {
+  background: #D8D6D2;
+  padding: 10px;
+}
+
+
+.hero-item.has-title,
+.hero-item.w2 {
+  width: 96%;
+}
+
+.hero-item.has-example {
+}
+
+.hero-item.has-example a {
+  font-size: 13px;
+  font-weight: bold;
+  background:#666;
+  color: white;
+  display: block;
+  border-radius: 10px 10px 8px 8px;
+}
+
+.hero-item.has-example a:hover {
+  background:#306;
+  color: white;
+}
+
+.hero-item.has-example .example-title {
+  padding: 5px 10px;
+  margin: 0;
+}
+
+.hero-item.has-example img {
+  display: block;
+  max-width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+
+
+/* enough width for 4 columns */
+@media screen and ( min-width: 720px ) {
+
+  .hero-item,
+  .hero-masonry .grid-sizer {
+    width: 22.5%;
+  }
+
+  .hero-item.has-title,
+  .hero-item.w2 {
+    width: 46.9%; /* just a lil under 47 */
+  }
+
+}
+
+/* ---- animate-item-size ---- */
+
+/* item is invisible, but used for layout */
+.masonry.animate-item-size-demo .item,
+.masonry.animate-item-size-demo .item-content {
+  width: 60px;
+  height: 60px;
+}
+
+.masonry.animate-item-size-demo .item {
+  border: none;
+  background: transparent;
+}
+
+/* item-content is visible, and transitions size */
+.animate-item-size-demo .item-content {
+  width: 60px;
+  height: 60px;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+  -webkit-transition: width 0.4s, height 0.4s;
+     -moz-transition: width 0.4s, height 0.4s;
+       -o-transition: width 0.4s, height 0.4s;
+          transition: width 0.4s, height 0.4s;
+}
+
+.animate-item-size-demo .item:hover .item-content {
+  border-color: white;
+  background: #A2C;
+}
+
+/* both item and item content change size */
+.animate-item-size-demo .item.is-expanded,
+.animate-item-size-demo .item.is-expanded .item-content {
+  width: 180px;
+  height: 120px;
+}
+
+.animate-item-size-demo .item.is-expanded {
+  z-index: 2;
+}
+
+.animate-item-size-demo .item.is-expanded .item-content {
+  background: #F90;
+}
+
+
+/* ---- animate item size responsive ---- */
+
+#animate-item-size-responsive .item,
+#animate-item-size-responsive .grid-sizer {
+  width: 20%;
+}
+
+#animate-item-size-responsive .item-content {
+  width:  100%;
+  height: 100%;
+}
+
+/* item has expanded size */
+#animate-item-size-responsive .item.is-expanded {
+  width: 60%;
+}
+.short-width {
+	width:750px;
+}
+
+body .iframe { 
+	overflow: hidden;  
+
+} 
+
+body .modal {
+    /* new custom width */
+    width: 800px;
+	height:600px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin-left: -400px;
+	padding-left:30px;
+	overflow: hidden;
+}
+
+  .carousel-indicators {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 15px;
+  left: 550px;
+  }
+  
+  .carousel-indicators li{
+	  background-color:#666;
+  }
+  .carousel-indicators .active {
+	  background-color:#609;
+}
+.
