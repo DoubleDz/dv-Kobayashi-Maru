@@ -52,7 +52,7 @@
       }
       results = [];
       options = {
-        url: 'http://www.dv-mobile.com/site/?json=get_posts&count=6',
+        url: 'http://www.dv-mobile.com/site/?json=get_posts&count=10',
         type: 'GET',
         dataType: 'jsonp'
       };
