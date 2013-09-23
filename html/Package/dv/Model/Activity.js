@@ -11,7 +11,7 @@
       var ss;
 
       ss = {
-        total_posts: 6
+        total_posts: 10
       };
       Activity.__super__.constructor.call(this, Epic, view_nm, ss);
       this.cache_activities = [];

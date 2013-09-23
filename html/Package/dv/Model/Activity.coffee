@@ -1,7 +1,7 @@
 class Activity extends window.EpicMvc.ModelJS
 	constructor: (Epic,view_nm) ->
 		ss =
-			total_posts : 6
+			total_posts : 10
 		super Epic, view_nm, ss
 		@cache_activities = []
 	action: (act,p) ->
