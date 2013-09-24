@@ -1,4 +1,14 @@
 <epic:defer>
+  var $hero-masonry = $('#hero-masonry');
+  $container.imagesLoaded(function(){
+    $hero-masonry.masonry({
+    itemSelector : '.hero-item',
+    columnWidth : 240
+  });
+});
+</epic:defer>
+<!--
+<epic:defer>
   $(function(){
     $('#hero-masonry').masonry({
     // options
@@ -7,6 +17,7 @@
   });
 });
 </epic:defer>
+-->
 <div class="hero-masonry" id="hero-masonry">
 		<epic:foreach table="Activity/ActivityPost">
 			<div class="hero-item has-example is-hidden">
