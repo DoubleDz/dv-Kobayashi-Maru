@@ -1,4 +1,13 @@
-<div class="hero-masonry">
+<epic:defer>
+  $(function(){
+    $('#hero-masonry').masonry({
+    // options
+    itemSelector : '.hero-item',
+    columnWidth : 240
+  });
+});
+</epic:defer>
+<div class="hero-masonry" id="hero-massonry">
 		<epic:foreach table="Activity/ActivityPost">
 			<div class="hero-item has-example is-hidden">
 				<epic:link_action action="go_news_post" p:url="&ActivityPost/url">
