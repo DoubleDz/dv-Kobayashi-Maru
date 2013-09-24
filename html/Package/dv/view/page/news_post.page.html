@@ -1,0 +1,10 @@
+<div class="container short-width">
+	<div class="span7">
+		<epic:link_action action="close_modal" data-dismiss="modal" aria-hidden="true"><button type="button" class="close" >&times;</button></epic:link_action>
+	</div>
+	<div class="row">
+		<epic:foreach table="Activity/ActivePostUrl">
+			<iframe src="&ActivePostUrl/url;" width="780" height="550" frameborder="0"></iframe>
+		</epic:foreach>
+	</div>
+</div>

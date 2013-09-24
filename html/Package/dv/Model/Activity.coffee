@@ -2,16 +2,23 @@ class Activity extends window.EpicMvc.ModelJS
 	constructor: (Epic,view_nm) ->
 		ss =
 			total_posts : 10
+			active_post_url: false
 		super Epic, view_nm, ss
 		@cache_activities = []
 	action: (act,p) ->
 		debug = "action:#{act}"
+		console.log debug, p
+		r= {}; i= new window.EpicMvc.Issue @Epic, @view_nm, act; m= new window.EpicMvc.Issue @Epic, @view_nm, act
 		switch act
 			when "view_more"
 				console.log debug
 				total_posts += 6;
 				@Table = {}
-						
+			when "set_active_post_url"
+				console.log debug
+				@active_post_url = p.url
+				@invalidateTables ['ActivePostUrl']
+		[r,i,m]
 	loadTable: (tbl_nm) ->
 		debug = "loadTable:#{tbl_nm}"
 		switch tbl_nm
@@ -19,6 +26,10 @@ class Activity extends window.EpicMvc.ModelJS
 				results = @getActivities()
 				console.log debug, results
 				@Table[tbl_nm] = results
+			when 'ActivePostUrl'
+				table = []
+				table.push { url: @active_post_url }
+				@Table[tbl_nm] = table
 	getActivities: () ->
 		debug= "Activity.getActivities"
 		console.log debug, @cache_activities

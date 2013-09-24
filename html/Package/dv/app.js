@@ -157,6 +157,25 @@
                     }
                   }
                 ]
+              },
+              go_news_post: {
+                call: 'Activity/set_active_post_url',
+                use_fields: 'url',
+                RESULTS: [
+                  {
+                    r: {},
+                    call: 'Pageflow/save_path',
+                    RESULTS: [
+                      {
+                        r: {},
+                        call: 'Pageflow/path',
+                        p: {
+                          path: '//news_post'
+                        }
+                      }
+                    ]
+                  }
+                ]
               }
             },
             STEPS: {
@@ -197,6 +216,10 @@
               },
               about_career: {
                 page: 'about_career',
+                modal: 'slide'
+              },
+              news_post: {
+                page: 'news_post',
                 modal: 'slide'
               }
             }

@@ -11,26 +11,37 @@
       var ss;
 
       ss = {
-        total_posts: 10
+        total_posts: 10,
+        active_post_url: false
       };
       Activity.__super__.constructor.call(this, Epic, view_nm, ss);
       this.cache_activities = [];
     }
 
     Activity.prototype.action = function(act, p) {
-      var debug;
+      var debug, i, m, r;
 
       debug = "action:" + act;
+      console.log(debug, p);
+      r = {};
+      i = new window.EpicMvc.Issue(this.Epic, this.view_nm, act);
+      m = new window.EpicMvc.Issue(this.Epic, this.view_nm, act);
       switch (act) {
         case "view_more":
           console.log(debug);
           total_posts += 6;
-          return this.Table = {};
+          this.Table = {};
+          break;
+        case "set_active_post_url":
+          console.log(debug);
+          this.active_post_url = p.url;
+          this.invalidateTables(['ActivePostUrl']);
       }
+      return [r, i, m];
     };
 
     Activity.prototype.loadTable = function(tbl_nm) {
-      var debug, results;
+      var debug, results, table;
 
       debug = "loadTable:" + tbl_nm;
       switch (tbl_nm) {
@@ -38,6 +49,12 @@
           results = this.getActivities();
           console.log(debug, results);
           return this.Table[tbl_nm] = results;
+        case 'ActivePostUrl':
+          table = [];
+          table.push({
+            url: this.active_post_url
+          });
+          return this.Table[tbl_nm] = table;
       }
     };
 

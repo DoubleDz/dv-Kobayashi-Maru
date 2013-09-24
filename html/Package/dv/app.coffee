@@ -37,6 +37,9 @@ window.EpicMvc.app$dv=
 							r:{}, call: 'Pageflow/path', p:{path:'//about_leadership'} ]
 						go_about_career: 		 call: 'Pageflow/save_path', RESULTS: [
 							r:{}, call: 'Pageflow/path', p:{path:'//about_career'} ]
+						go_news_post: 	call: 'Activity/set_active_post_url', use_fields: 'url', RESULTS: [
+							r: {}, call: 'Pageflow/save_path', RESULTS: [
+								r:{}, call: 'Pageflow/path', p:{path:'//news_post'} ] ]	 		
 					STEPS:
 						landing:	page:'main'
 						mobile_activation: page:'mobile_activation', modal: 'slide'
@@ -48,3 +51,4 @@ window.EpicMvc.app$dv=
 						about_dvmobile: page:'about_dvmobile', modal: 'slide'
 						about_leadership: page:'about_leadership', modal: 'slide'
 						about_career: page:'about_career', modal: 'slide'
+						news_post: page: 'news_post', modal: 'slide'
