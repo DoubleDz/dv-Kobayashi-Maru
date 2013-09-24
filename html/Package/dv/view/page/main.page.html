@@ -1,11 +1,19 @@
 <epic:defer name="modal_height">
-	 $('.carousel').carousel()
+	 $('.carousel').carousel( {
+	 	interval: 9000
+	 })
 </epic:defer>
+
 <div class="container">
 
 	<!-- Carousel -->
 	<div class="row-fluid">
 		<epic:page_part part="carousel"/>
+	</div> <!-- row-fluid -->
+	
+	<!--Test Masonry-->
+	<div class="row-fluid">
+		<epic:page_part part="test_masonry"/>
 	</div> <!-- row-fluid -->
 	
 	<!--Activity-->
