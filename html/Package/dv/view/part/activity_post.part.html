@@ -3,19 +3,18 @@
   $masonry_container.imagesLoaded(function(){
     $masonry_container.masonry({
     itemSelector : '.masonry-item',
-
+	isFitWidth: true
   });
 });
 </epic:defer>
-<div class="row-fluid">
-	<div id="masonry-container" class="masonry-container">
-		<epic:foreach table="Activity/ActivityPost">
-			<div class="masonry-item">
-				<epic:link_action action="go_news_post" p:url="&ActivityPost/url">
-					<img src="&ActivityPost/picture;">
-					<p class="title">&ActivityPost/title;</p>
-				</epic:link_action>
-			</div>
-		</epic:foreach>
-	</div>
+
+<div id="masonry-container" class="masonry-container">
+	<epic:foreach table="Activity/ActivityPost">
+		<div class="masonry-item">
+			<epic:link_action action="go_news_post" p:url="&ActivityPost/url">
+				<img src="&ActivityPost/picture;">
+				<p class="title">&ActivityPost/title;</p>
+			</epic:link_action>
+		</div>
+	</epic:foreach>
 </div>

@@ -1,12 +1,12 @@
 .masonry-container {
 	background-color:transparent;
 	border-radius: 10px;
-	padding: 10px 1%;
+	padding: 10px;
 	margin-bottom: 20px;
 }
 
 .masonry-item {
-	width: 200px;
+	width: 220px;
 	margin: 5px;
 	float: left;
 }
