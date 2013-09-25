@@ -1,31 +1,21 @@
 <epic:defer>
-  var $hero_masonry = $('#hero-masonry');
-  $hero_masonry.imagesLoaded(function(){
-    $hero_masonry.masonry({
-    itemSelector : '.hero-item',
-    columnWidth : 240
+  var $masonry_container = $('#masonry-container');
+  $masonry_container.imagesLoaded(function(){
+    $masonry_container.masonry({
+    itemSelector : '.masonry-item',
+    columnWidth : 270
   });
 });
 </epic:defer>
-<!--
-<epic:defer>
-  $(function(){
-    $('#hero-masonry').masonry({
-    // options
-    itemSelector : '.hero-item',
-    columnWidth : 240
-  });
-});
-</epic:defer>
--->
-<div class="hero-masonry" id="hero-masonry">
+<div class="row-fluid">
+	<div id="masonry-container" class="masonry-container">
 		<epic:foreach table="Activity/ActivityPost">
-			<div class="hero-item has-example is-hidden">
+			<div class="masonry-item">
 				<epic:link_action action="go_news_post" p:url="&ActivityPost/url">
-				<img src="&ActivityPost/picture;">
-				<p class="example-title">&ActivityPost/title;</p>
+					<img src="&ActivityPost/picture;">
+					<p class="title">&ActivityPost/title;</p>
 				</epic:link_action>
 			</div>
 		</epic:foreach>
-<!-- put in once json works <p class="pull-right"><button id="append-button">View More<img src="Package/dv/images/white_double_dash.png"></button>-->
+	</div>
 </div>

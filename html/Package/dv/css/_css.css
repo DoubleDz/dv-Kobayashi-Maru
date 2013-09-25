@@ -132,155 +132,7 @@ button:active {
     border-radius: 0 0 8px 8px;
 }
 
-/* ---- hero masonry ---- */
 
-.hero-masonry { 
-  background-color:transparent;
-  border-radius: 10px;
-  padding: 10px 1%;
-  margin-bottom: 20px;
-}
-
-.hero-masonry:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.hero-item,
-.hero-masonry .grid-sizer {
-  width: 46.9%; /* juse a lil under  47 */
-  margin: 10px 1%;
-  float: left;
-  border-radius: 8px;
-}
-
-/* necessary for proper sizing with margins */
-.hero-masonry .grid-sizer {
-  position: absolute;
-}
-
-.hero-item.texty {
-  background: #D8D6D2;
-  padding: 10px;
-}
-
-
-.hero-item.has-title,
-.hero-item.w2 {
-  width: 96%;
-}
-
-.hero-item.has-example {
-}
-
-.hero-item.has-example a {
-  font-size: 13px;
-  font-weight: bold;
-  background:#666;
-  color: white;
-  display: block;
-  border-radius: 10px 10px 8px 8px;
-}
-
-.hero-item.has-example a:hover {
-  background:#306;
-  color: white;
-}
-
-.hero-item.has-example .example-title {
-  padding: 5px 10px;
-  margin: 0;
-}
-
-.hero-item.has-example img {
-  display: block;
-  max-width: 100%;
-  border-radius: 8px 8px 0 0;
-}
-
-
-
-/* enough width for 4 columns */
-@media screen and ( min-width: 720px ) {
-
-  .hero-item,
-  .hero-masonry .grid-sizer {
-    width: 22.5%;
-  }
-
-  .hero-item.has-title,
-  .hero-item.w2 {
-    width: 46.9%; /* just a lil under 47 */
-  }
-
-}
-
-/* ---- animate-item-size ---- */
-
-/* item is invisible, but used for layout */
-.masonry.animate-item-size-demo .item,
-.masonry.animate-item-size-demo .item-content {
-  width: 60px;
-  height: 60px;
-}
-
-.masonry.animate-item-size-demo .item {
-  border: none;
-  background: transparent;
-}
-
-/* item-content is visible, and transitions size */
-.animate-item-size-demo .item-content {
-  width: 60px;
-  height: 60px;
-  background: #D26;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.5);
-  border-radius: 5px;
-  -webkit-transition: width 0.4s, height 0.4s;
-     -moz-transition: width 0.4s, height 0.4s;
-       -o-transition: width 0.4s, height 0.4s;
-          transition: width 0.4s, height 0.4s;
-}
-
-.animate-item-size-demo .item:hover .item-content {
-  border-color: white;
-  background: #A2C;
-}
-
-/* both item and item content change size */
-.animate-item-size-demo .item.is-expanded,
-.animate-item-size-demo .item.is-expanded .item-content {
-  width: 180px;
-  height: 120px;
-}
-
-.animate-item-size-demo .item.is-expanded {
-  z-index: 2;
-}
-
-.animate-item-size-demo .item.is-expanded .item-content {
-  background: #F90;
-}
-
-
-/* ---- animate item size responsive ---- */
-
-#animate-item-size-responsive .item,
-#animate-item-size-responsive .grid-sizer {
-  width: 20%;
-}
-
-#animate-item-size-responsive .item-content {
-  width:  100%;
-  height: 100%;
-}
-
-/* item has expanded size */
-#animate-item-size-responsive .item.is-expanded {
-  width: 60%;
-}
 .short-width {
 	width:750px;
 }
@@ -300,18 +152,19 @@ body .modal {
 	overflow: hidden;
 }
 
-  .carousel-indicators {
-  position: absolute;
-  top: auto;
-  right: auto;
-  bottom: 15px;
-  left: 150px;
-  }
-  
-  .carousel-indicators li{
-	  background-color:#666;
-  }
-  .carousel-indicators .active {
-	  background-color:#609;
+.carousel-indicators {
+	position: absolute;
+	top: auto;
+	right: auto;
+	bottom: 15px;
+	left: 150px;
 }
-.
+
+.carousel-indicators li{
+  background-color:#666;
+}
+.carousel-indicators .active {
+  background-color:#609;
+}
+
+
