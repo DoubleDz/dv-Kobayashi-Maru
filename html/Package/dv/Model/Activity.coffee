@@ -36,7 +36,7 @@ class Activity extends window.EpicMvc.ModelJS
 		return @cache_activities if @cache_activities.length
 		results= []
 		options = 
-			url : 'http://www.dv-mobile.com/site/?json=get_posts&count=10'
+			url : 'http://www.dv-mobile.com/dev/?json=get_posts&count=10'
 			type : 'GET'
 			dataType: 'jsonp'
 		($.ajax options).always (data, textStatus, errorThrown) =>
