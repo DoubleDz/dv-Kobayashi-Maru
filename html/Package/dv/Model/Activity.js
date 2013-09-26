@@ -65,29 +65,33 @@
       }
       results = [];
       options = {
-        url: 'http://www.dv-mobile.com/dev/?json=get_posts&count=10',
+        url: 'http://www.dv-mobile.com/dev/api/get_category_posts/?category_slug=featured',
         type: 'GET',
         dataType: 'jsonp'
       };
       return ($.ajax(options)).always(function(data, textStatus, errorThrown) {
         var post, row, _i, _len, _ref;
         console.log(debug, 'success function:', data);
-        _ref = data.posts;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          post = _ref[_i];
-          row = {};
-          row.title = post.title_plain;
-          row.url = post.url;
-          row.picture = '';
-          if (post.thumbnail_images) {
-            row.picture = post.thumbnail_images.full.url;
+        if (data.status === 'ok') {
+          _ref = data.posts;
+          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            post = _ref[_i];
+            row = {};
+            row.title = post.title;
+            row.url = post.url;
+            row.picture = '';
+            if (post.thumbnail_images) {
+              row.picture = post.thumbnail_images.full.url;
+            }
+            console.log(debug, row);
+            results.push(row);
           }
-          console.log(debug, row);
-          results.push(row);
+          _this.cache_activities = results;
+          _this.invalidateTables(['ActivityPost']);
+          return console.log('final table', results);
+        } else {
+          return console.log(debug, 'Unable to load activity feed:', errorThrown);
         }
-        _this.cache_activities = results;
-        _this.invalidateTables(['ActivityPost']);
-        return console.log('final table', results);
       });
     };
 

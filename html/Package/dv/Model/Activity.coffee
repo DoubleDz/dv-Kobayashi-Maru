@@ -36,21 +36,24 @@ class Activity extends window.EpicMvc.ModelJS
 		return @cache_activities if @cache_activities.length
 		results= []
 		options = 
-			url : 'http://www.dv-mobile.com/dev/?json=get_posts&count=10'
+		#	url : 'http://www.dv-mobile.com/site/api/get_category_posts/?category_slug=featured'
+			url : 'http://www.dv-mobile.com/dev/api/get_category_posts/?category_slug=featured'
 			type : 'GET'
 			dataType: 'jsonp'
 		($.ajax options).always (data, textStatus, errorThrown) =>
 			console.log debug, 'success function:', data
-			for post in data.posts
-				row = {}
-				row.title = post.title_plain
-				row.url = post.url
-				row.picture = ''
-				if post.thumbnail_images
-					row.picture = post.thumbnail_images.full.url
-				console.log debug, row
-				results.push row
-			@cache_activities = results
-			@invalidateTables ['ActivityPost']
-			console.log 'final table', results
+			if data.status is 'ok'
+				for post in data.posts
+					row = {}
+					row.title = post.title
+					row.url = post.url
+					row.picture = ''
+					if post.thumbnail_images
+						row.picture = post.thumbnail_images.full.url
+					console.log debug, row
+					results.push row
+				@cache_activities = results
+				@invalidateTables ['ActivityPost']
+				console.log 'final table', results
+			else console.log debug, 'Unable to load activity feed:', errorThrown
 window.EpicMvc.Model.Activity= Activity # Public API
