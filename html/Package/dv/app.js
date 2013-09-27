@@ -158,6 +158,18 @@
                   }
                 ]
               },
+              go_mobile_customization: {
+                call: 'Pageflow/save_path',
+                RESULTS: [
+                  {
+                    r: {},
+                    call: 'Pageflow/path',
+                    p: {
+                      path: '//mobile_customization'
+                    }
+                  }
+                ]
+              },
               go_news_post: {
                 call: 'Activity/set_active_post_url',
                 use_fields: 'url',
@@ -216,6 +228,10 @@
               },
               about_career: {
                 page: 'about_career',
+                modal: 'slide'
+              },
+              mobile_customization: {
+                page: 'mobile_customization',
                 modal: 'slide'
               },
               news_post: {
