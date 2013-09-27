@@ -8,6 +8,9 @@
 	padding: 0;
 	margin: 0;
 }
+.hero-unit {
+	background-color:transparent;
+}
 .some-text {
 	color:#FFF;
 }
@@ -15,11 +18,13 @@
 	color:#606;
 }
 .some-background {
-	background:url(../images/container_image1.png);
+	background:url(../images/container_image1.png) no-repeat;
+    background-size:cover;
 }
 	
 .someother-background {
-	background:url(../images/container_image2.png);
+	background:url(../images/container_image2.png) no-repeat;
+    background-size:cover;
 }
 .some-footer {
 	background:url(../images/footer_image.png);
@@ -173,7 +178,7 @@ body .modal {
 .carousel-control {
 	position: absolute;
 	top: auto;
-	bottom: 2px;
+	bottom: 10px;
 }
 
 .close {
