@@ -173,9 +173,7 @@ body .modal {
 .carousel-control {
 	position: absolute;
 	top: auto;
-	right: auto;
 	bottom: 2px;
-	left: auto;
 }
 
 .close {
