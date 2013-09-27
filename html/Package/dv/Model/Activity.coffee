@@ -36,8 +36,8 @@ class Activity extends window.EpicMvc.ModelJS
 		return @cache_activities if @cache_activities.length
 		results= []
 		options = 
-		#	url : 'http://www.dv-mobile.com/site/api/get_category_posts/?category_slug=featured&count=10'
-			url : 'http://www.dv-mobile.com/dev/api/get_category_posts/?category_slug=featured&count=10'
+			url : 'http://www.dv-mobile.com/site/api/get_category_posts/?category_slug=featured&count=10'
+		#	url : 'http://www.dv-mobile.com/dev/api/get_category_posts/?category_slug=featured&count=10'
 			type : 'GET'
 			dataType: 'jsonp'
 		($.ajax options).always (data, textStatus, errorThrown) =>
