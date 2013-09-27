@@ -170,21 +170,14 @@ body .modal {
   background-color:#609;
 }
 
-.carousel-control.left {
+.carousel-control {
 	position: absolute;
 	top: auto;
 	right: auto;
 	bottom: 2px;
-	left: 110px;
+	left: auto;
 }
 
-.carousel-control.right {
-	position: absolute;
-	top: auto;
-	right: auto;
-	bottom: 2px;
-	left: 290px;
-}
 .close {
 	width:40px;
 	height:40px;
