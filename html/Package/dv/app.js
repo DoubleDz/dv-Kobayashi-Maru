@@ -50,77 +50,50 @@
                   }
                 ]
               },
+              clear_service_part: {
+                call: 'User/clear_service_part'
+              },
               go_mobile_activation: {
-                call: 'Pageflow/save_path',
-                RESULTS: [
-                  {
-                    r: {},
-                    call: 'Pageflow/path',
-                    p: {
-                      path: '//mobile_activation'
-                    }
-                  }
-                ]
+                call: 'User/focus_service_part',
+                p: {
+                  service_part: 'mobile_activation'
+                }
               },
               go_mobile_sdk_api: {
-                call: 'Pageflow/save_path',
-                RESULTS: [
-                  {
-                    r: {},
-                    call: 'Pageflow/path',
-                    p: {
-                      path: '//mobile_sdk_api'
-                    }
-                  }
-                ]
+                call: 'User/focus_service_part',
+                p: {
+                  service_part: 'mobile_sdk_api'
+                }
               },
               go_mobile_strat_plan: {
-                call: 'Pageflow/save_path',
-                RESULTS: [
-                  {
-                    r: {},
-                    call: 'Pageflow/path',
-                    p: {
-                      path: '//mobile_strat_plan'
-                    }
-                  }
-                ]
+                call: 'User/focus_service_part',
+                p: {
+                  service_part: 'mobile_strat_plan'
+                }
               },
               go_mobile_voice: {
-                call: 'Pageflow/save_path',
-                RESULTS: [
-                  {
-                    r: {},
-                    call: 'Pageflow/path',
-                    p: {
-                      path: '//mobile_voice'
-                    }
-                  }
-                ]
+                call: 'User/focus_service_part',
+                p: {
+                  service_part: 'mobile_voice_activation'
+                }
               },
               go_social_integration: {
-                call: 'Pageflow/save_path',
-                RESULTS: [
-                  {
-                    r: {},
-                    call: 'Pageflow/path',
-                    p: {
-                      path: '//social_integration'
-                    }
-                  }
-                ]
+                call: 'User/focus_service_part',
+                p: {
+                  service_part: 'social_integration'
+                }
               },
               go_cloud_strat: {
-                call: 'Pageflow/save_path',
-                RESULTS: [
-                  {
-                    r: {},
-                    call: 'Pageflow/path',
-                    p: {
-                      path: '//cloud_strat'
-                    }
-                  }
-                ]
+                call: 'User/focus_service_part',
+                p: {
+                  service_part: 'cloud_strat'
+                }
+              },
+              go_mobile_customization: {
+                call: 'User/focus_service_part',
+                p: {
+                  service_part: 'mobile_customization'
+                }
               },
               go_about_dvmobile: {
                 call: 'Pageflow/save_path',
@@ -158,18 +131,6 @@
                   }
                 ]
               },
-              go_mobile_customization: {
-                call: 'Pageflow/save_path',
-                RESULTS: [
-                  {
-                    r: {},
-                    call: 'Pageflow/path',
-                    p: {
-                      path: '//mobile_customization'
-                    }
-                  }
-                ]
-              },
               go_news_post: {
                 call: 'Activity/set_active_post_url',
                 use_fields: 'url',
@@ -194,30 +155,6 @@
               landing: {
                 page: 'main'
               },
-              mobile_activation: {
-                page: 'mobile_activation',
-                modal: 'slide'
-              },
-              mobile_sdk_api: {
-                page: 'mobile_sdk_api',
-                modal: 'slide'
-              },
-              mobile_strat_plan: {
-                page: 'mobile_strat_plan',
-                modal: 'slide'
-              },
-              mobile_voice: {
-                page: 'mobile_voice_activation',
-                modal: 'slide'
-              },
-              social_integration: {
-                page: 'social_integration',
-                modal: 'slide'
-              },
-              cloud_strat: {
-                page: 'cloud_strat',
-                modal: 'slide'
-              },
               about_dvmobile: {
                 page: 'about_dvmobile',
                 modal: 'slide'
@@ -228,10 +165,6 @@
               },
               about_career: {
                 page: 'about_career',
-                modal: 'slide'
-              },
-              mobile_customization: {
-                page: 'mobile_customization',
                 modal: 'slide'
               },
               news_post: {

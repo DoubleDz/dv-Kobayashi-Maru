@@ -9,7 +9,10 @@
 
     function User(Epic, view_nm) {
       var ss;
-      ss = User.__super__.constructor.call(this, Epic, view_nm);
+      ss = {
+        active_service_part: ''
+      };
+      User.__super__.constructor.call(this, Epic, view_nm, ss);
     }
 
     User.prototype.action = function(act, p) {
@@ -19,12 +22,30 @@
         case "home":
           console.log(debug);
           return this.Table = {};
+        case "focus_service_part":
+          console.log(debug);
+          this.active_service_part = p.service_part;
+          return this.Table = {};
+        case "clear_service_part":
+          console.log(debug);
+          this.active_service_part = '';
+          return this.Table = {};
       }
     };
 
     User.prototype.loadTable = function(tbl_nm) {
-      var debug;
-      return debug = "loadTable:" + tbl_nm;
+      var debug, options, table;
+      debug = "loadTable:" + tbl_nm;
+      switch (tbl_nm) {
+        case 'Options':
+          table = [];
+          options = {
+            active_service_part: this.active_service_part
+          };
+          table.push(options);
+          console.log(debug, table);
+          return this.Table[tbl_nm] = table;
+      }
     };
 
     User.prototype.fistLoadData = function(oFist) {};
