@@ -1,22 +1,13 @@
 
-<script language="JavaScript">
-<!--
-function autoResize(id){
-    var newheight;
-    var newwidth;
+<epic:defer>
 
-    if(document.getElementById){
-        newheight=document.getElementById(id).contentWindow.document .body.scrollHeight;
-        newwidth=document.getElementById(id).contentWindow.document .body.scrollWidth;
-    }
+    $('#iframe1').iframe ({
+    	 height: ('#iframe1').contentWindow.document.body.scrollHeight + 'px !important'
+     ]);
 
-    document.getElementById(id).height= (newheight) + "px";
-    document.getElementById(id).width= (newwidth) + "px";
-}
-//-->
-</script>
+</epic:defer>
 
-<IFRAME SRC="http://www.dv-mobile.com/site/home/" width="100%" height="200px" id="iframe1" marginheight="0" frameborder="0" onLoad="autoResize('iframe1');"></iframe>
+<IFRAME SRC="http://www.dv-mobile.com/site/home/" width="100%" id="iframe1" marginheight="0" frameborder="0"></iframe>
 
             	<!--<iframe id="MyIframe" src="http://www.dv-mobile.com/site/home/" width="100%" height="200px" marginheight="0" frameborder="0" onLoad="ResizeIframe('MyIframe')"  scrolling="no"></iframe>
 <!--</div>
