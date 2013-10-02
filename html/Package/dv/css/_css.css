@@ -189,3 +189,6 @@ body .modal {
 .lead {
 	font-size:18px;
 }
+.iframe {
+	background: none transparent;
+}

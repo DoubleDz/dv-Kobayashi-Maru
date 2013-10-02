@@ -1,15 +1,28 @@
-<!--
-<div class="container short-width">
-			<div class="span7">
-          		<epic:link_action action="clear_service_part"><button type="button" class="close" >&times;</button></epic:link_action>
-          </div>
-			<div class="row">
-            	<iframe src="http://www.dv-mobile.com/site/home/" width="780" height="550" frameborder="0"></iframe>
-           </div>
-</div>
--->
 
-<h1>Services</h1>
+<script language="JavaScript">
+<!--
+function autoResize(id){
+    var newheight;
+    var newwidth;
+
+    if(document.getElementById){
+        newheight=document.getElementById(id).contentWindow.document .body.scrollHeight;
+        newwidth=document.getElementById(id).contentWindow.document .body.scrollWidth;
+    }
+
+    document.getElementById(id).height= (newheight) + "px";
+    document.getElementById(id).width= (newwidth) + "px";
+}
+//-->
+</script>
+
+<IFRAME SRC="http://www.dv-mobile.com/site/home/" width="100%" height="200px" id="iframe1" marginheight="0" frameborder="0" onLoad="autoResize('iframe1');"></iframe>
+
+            	<!--<iframe id="MyIframe" src="http://www.dv-mobile.com/site/home/" width="100%" height="200px" marginheight="0" frameborder="0" onLoad="ResizeIframe('MyIframe')"  scrolling="no"></iframe>
+<!--</div>
+
+
+<!--<h1>Services</h1>
 
 <ul>
 <li><b>Design</b> (Conceptual, UI, Graphics, Functional, Database, Test, etc.)</li>
@@ -18,5 +31,5 @@
 <li><b>Support</b> (Maintenance, Upgrades, New Device Support)</li>
 </ul>
 <p>We are experts at building high-quality custom iPhone / iPad / Android Mobile applications and Software Development Kits (SDK).</p>
-
+-->
 <epic:link_action action="clear_service_part" class="btn">All Services</epic:link_action>
