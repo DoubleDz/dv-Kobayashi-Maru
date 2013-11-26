@@ -65,7 +65,7 @@
       }
       results = [];
       options = {
-        url: 'http://www.dv-mobile.com/site/api/get_category_posts/?category_slug=featured&count=10',
+        url: 'http://www.dv-mobile.com/I/api/get_category_posts/?category_slug=featured&count=10',
         type: 'GET',
         dataType: 'jsonp'
       };
